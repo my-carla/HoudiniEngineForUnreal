@@ -1131,8 +1131,8 @@ FHoudiniEngineDetails::CreateAssetOptionsWidgets(
 
 	auto IsCheckedParameterChangedLambda = [MainHAC]()
 	{
-      	if (!IsValidWeakPointer(MainHAC))
-      		return ECheckBoxState::Unchecked;
+    if (!IsValidWeakPointer(MainHAC))
+      return ECheckBoxState::Unchecked;
 
 		return MainHAC->bCookOnParameterChange ? ECheckBoxState::Checked : ECheckBoxState::Unchecked;
 	};
